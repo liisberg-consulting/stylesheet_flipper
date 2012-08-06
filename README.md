@@ -1,6 +1,6 @@
 # StylesheetFlipper
 
-TODO: Write a gem description
+Flip stylesheets on-the-fly and during asset compilation
 
 ## Installation
 
@@ -18,7 +18,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Edit your application to serve up a copy of your stylesheets with '-flipped' postfixed to the name
+
+*app/assets/stylesheets/application.css*
+
+    body {
+      direction: ltr;
+    }
+
+*app/assets/stylesheets/application-flipped.css*
+
+    /*
+     *= require application
+    */
+
+*app/helpers/application_helper.rb*
+
+    def stylesheet_name(options = {})
+      options[:for] ||= 'application'
+      if [:ar, :ckb, :fa, :he, :ug].include? I18n.locale
+        "#{options[:for]}-flipped"
+      else
+        options[:for]
+      end
+    end
+
+*app/views/layouts/application.html.erb*
+
+    <%= stylesheet_link_tag stylesheet_name %>
+
+*config/environments/development.rb*
+
+    # for flipped versions to work, we need to bundle the stylesheet in dev mode as well
+    config.assets.debug = false
+
+*config/environments/production.rb*
+
+    config.assets.precompile += %w( application-flipped.css )
 
 ## Contributing
 
