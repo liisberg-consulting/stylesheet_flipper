@@ -1,5 +1,5 @@
 module StylesheetFlipper
-  class Railtie < ::Rails::Railtie
+  class Railtie < Rails::Railtie
     initializer "stylesheet_flipper.view_helpers" do
       ActionView::Base.send :include, StylesheetFlipper::ViewHelpers
     end
