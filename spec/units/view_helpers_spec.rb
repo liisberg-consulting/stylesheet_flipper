@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'stylesheet_flipper/helper'
+require 'stylesheet_flipper/view_helpers'
 
 module StylesheetFlipper
   class TestHelper; end
-  StylesheetFlipper::TestHelper.send :include, StylesheetFlipper::Helper
+  StylesheetFlipper::TestHelper.send :include, StylesheetFlipper::ViewHelpers
 
   describe TestHelper do
     let(:helper){ TestHelper.new }
