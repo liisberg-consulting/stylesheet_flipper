@@ -36,10 +36,6 @@ Edit your application to serve up a copy of your stylesheets with '-flipped' pos
 
     <%= stylesheet_link_tag stylesheet_flipper %>
 
-Note, if you have other stylesheets, you specify using:
-
-    <%= stylesheet_link_tag stylesheet_flipper(for: 'my_custom_css') %>
-
 *config/environments/development.rb*
 
     # for flipped versions to work, we need to bundle the stylesheet in dev mode as well
@@ -48,6 +44,16 @@ Note, if you have other stylesheets, you specify using:
 *config/environments/production.rb*
 
     config.assets.precompile += %w( application-flipped.css )
+
+### Advanced usage
+
+If you have stylesheets other that application.css, you can specify using
+
+    <%= stylesheet_link_tag stylesheet_flipper(for: 'my_custom_css') %>
+
+You can specify the locales you want flipped by adding *config/initializers/stylesheet_flipper.rb*
+
+    StylesheetFlipper.flipped_locales = [:en, :da ...]
 
 ## Contributing
 

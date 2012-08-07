@@ -8,6 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Flip stylesheets on-the-fly and during asset compilation}
   gem.homepage      = "https://github.com/monibuds/stylesheet_flipper"
 
+  gem.add_development_dependency "rspec"
   gem.add_runtime_dependency "rails", "~>3.0"
   gem.add_runtime_dependency "r2"
 
