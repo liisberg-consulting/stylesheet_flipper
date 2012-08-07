@@ -1,3 +1,5 @@
+require "stylesheet_flipper/view_helpers"
+
 module StylesheetFlipper
   class Railtie < Rails::Railtie
     initializer "stylesheet_flipper.view_helpers" do
