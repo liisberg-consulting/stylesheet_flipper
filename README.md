@@ -32,20 +32,13 @@ Edit your application to serve up a copy of your stylesheets with '-flipped' pos
      *= require application
     */
 
-*app/helpers/application_helper.rb*
-
-    def stylesheet_name(options = {})
-      options[:for] ||= 'application'
-      if [:ar, :ckb, :fa, :he, :ug].include? I18n.locale
-        "#{options[:for]}-flipped"
-      else
-        options[:for]
-      end
-    end
-
 *app/views/layouts/application.html.erb*
 
-    <%= stylesheet_link_tag stylesheet_name %>
+    <%= stylesheet_link_tag stylesheet_flipper %>
+
+Note, if you have other stylesheets, you specify using:
+
+    <%= stylesheet_link_tag stylesheet_flipper(for: 'my_custom_css') %>
 
 *config/environments/development.rb*
 
