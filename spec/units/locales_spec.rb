@@ -14,8 +14,10 @@ module StylesheetFlipper
   
   describe "setting locales" do
     it "should set flipped_locales and normalize values" do
+      flipped_locales = StylesheetFlipper.flipped_locales
       StylesheetFlipper.flipped_locales = [:da, 'en']
       StylesheetFlipper.flipped_locales.should == [:da, :en]
+      StylesheetFlipper.flipped_locales = flipped_locales
     end
 
     it "should raise argument error if invalid argument" do

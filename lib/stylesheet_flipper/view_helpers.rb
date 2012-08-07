@@ -1,7 +1,7 @@
 require 'stylesheet_flipper/locales'
 
 module StylesheetFlipper
-  module Helper
+  module ViewHelpers
     def stylesheet_flipper(options = {})
       options[:for] ||= 'application'
       if StylesheetFlipper.flipped_locales.include? I18n.locale
