@@ -4,8 +4,8 @@ require File.expand_path('../lib/stylesheet_flipper/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Jeppe Liisberg"]
   gem.email         = ["jeppe@liisberg.net"]
-  gem.description   = %q{Flip stylesheets on-the-fly and during asset compilation}
-  gem.summary       = %q{Flip stylesheets on-the-fly and during asset compilation}
+  gem.description   = %q{Makes your LTR stylesheet work for RTL locales and vice versa}
+  gem.summary       = %q{Makes your LTR stylesheet work for RTL locales and vice versa}
   gem.homepage      = "https://github.com/monibuds/stylesheet_flipper"
 
   gem.add_development_dependency "rspec"
