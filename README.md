@@ -1,6 +1,9 @@
 # StylesheetFlipper
 
-Flip stylesheets on-the-fly and during asset compilation
+Makes your LTR stylesheet work for RTL locales and vice versa.
+
+* Flips stylesheets on-the-fly in development mode
+* Creates flipped versions during asset compilation
 
 ## Installation
 
