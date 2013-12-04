@@ -7,7 +7,7 @@ module StylesheetFlipper
 
   describe TestHelper do
     let(:helper){ TestHelper.new }
-    
+
     it { should respond_to :stylesheet_flipper }
     it "should return 'application' for :en locale" do
       I18n.locale = :en

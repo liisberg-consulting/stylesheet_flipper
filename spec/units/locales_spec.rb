@@ -11,7 +11,7 @@ module StylesheetFlipper
     it { should_not include(:en) }
     it { should_not include(:da) }
   end
-  
+
   describe "setting locales" do
     it "should set flipped_locales and normalize values" do
       flipped_locales = StylesheetFlipper.flipped_locales
