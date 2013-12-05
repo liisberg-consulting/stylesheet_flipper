@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/monibuds/stylesheet_flipper"
 
   gem.add_development_dependency "rspec"
-  gem.add_runtime_dependency "rails", "~>3.1"
+  gem.add_runtime_dependency "rails", ">=3.1"
   gem.add_runtime_dependency "r2"
 
   gem.files         = `git ls-files`.split($\)
