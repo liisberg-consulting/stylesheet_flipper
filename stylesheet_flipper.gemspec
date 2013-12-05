@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jeppe@liisberg.net"]
   gem.description   = %q{Makes your LTR stylesheet work for RTL locales and vice versa}
   gem.summary       = %q{Makes your LTR stylesheet work for RTL locales and vice versa}
-  gem.homepage      = "https://github.com/monibuds/stylesheet_flipper"
+  gem.homepage      = "https://github.com/liisberg-consulting/stylesheet_flipper"
 
   gem.add_development_dependency "rspec"
   gem.add_runtime_dependency "rails", ">=3.1"
